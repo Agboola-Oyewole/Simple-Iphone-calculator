@@ -7,18 +7,35 @@ for (let index = 0; index < digits; index++) {
         var digitValue = this.textContent;
         var classValue = this.classList[0];
         buttonAnimation(classValue);
-        total += digitValue
-        document.querySelector('#input-area').textContent = total;
+        if (digitValue === '.') {
+            if (total.length === 0) {
+                total += '0.' 
+                document.querySelector('#input-area').textContent = total;
+            }
+            else {
+                total += digitValue 
+                document.querySelector('#input-area').textContent = total;
+            }
+        }
+        else{
+            total += digitValue
+            document.querySelector('#input-area').textContent = total;
+        }
+        
     })    
 }
 
 document.addEventListener('keydown', function(event) {
     var keyPressed = event.key;
     if (keyPressed === 'Backspace') {
-        console.log(total);
         total = total.slice(0, -1);  // Assign the modified string back to the variable
-        document.querySelector('#input-area').textContent = total;
-        console.log(total);
+        if (total.length === 0) {
+            document.querySelector('#input-area').textContent = 0; 
+        }
+        else{
+            document.querySelector('#input-area').textContent = total;
+        }
+        
     }
     else if (keyPressed === '+') {
         buttonAnimation('add');
@@ -62,8 +79,21 @@ for (let index = 0; index < digits; index++) {
             console.log(digitValue);
             var classValue = document.querySelectorAll('.digits')[index].classList[0];
             buttonAnimation(classValue);
-            total += digitValue;
-            document.querySelector('#input-area').textContent = total;
+            if (digitValue === '.') {
+                if (total.length === 0) {
+                    total += '0.' 
+                    document.querySelector('#input-area').textContent = total;
+                }
+                else {
+                    total += digitValue 
+                    document.querySelector('#input-area').textContent = total;
+                }
+            }
+            else{
+                total += digitValue;
+                document.querySelector('#input-area').textContent = total;
+            }
+            
         }
     });
 }
@@ -88,20 +118,20 @@ for (let num = 0; num < operators; num++) {
             total = '';
             equalTotal('+');
         }
-        else if (digitValue === '-') {
+        else if (digitValue === '−') {
             firstDigit = total;
             document.querySelector('#input-area').textContent = 0
             total = '';
             equalTotal('-');
         }
         
-        else if (digitValue === 'x') {
+        else if (digitValue === '×') {
             firstDigit = total;
             document.querySelector('#input-area').textContent = 0
             total = '';
             equalTotal('*');
         }
-        else if (digitValue === '/') {
+        else if (digitValue === '÷') {
             firstDigit = total;
             document.querySelector('#input-area').textContent = 0
             total = '';

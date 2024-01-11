@@ -17,13 +17,13 @@
       .calc-container {
         border-radius: 10px;
         background-color: black;
-        height: 500px;
-        width: 350px;
+        height: 460px;
+        width: 307px;
       }
       .calc-grid {
         display: grid;
-        grid-template-columns: 60px 60px 60px 60px;
-        grid-template-rows: 60px 60px 60px 60px 60px;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px;
         padding-left: 30px;
         padding-top: 10px;
         row-gap: 10px;
@@ -70,8 +70,8 @@
         id="input-area"
         style="
           border-radius: 10px;
-          padding: 20px 40px 0 20px;
-          height: 100px;
+          padding: 40px 40px 0 20px;
+          height: 80px;
           font-size: 3.5rem;
           text-align: right;
           background-color: black;
@@ -80,23 +80,23 @@
         0
       </div>
       <div class="calc-grid">
-        <div class="clear circular top">C</div>
+        <div class="clear circular top">AC</div>
         <div class="minus circular top">+/-</div>
         <div class="percent circular operators top">%</div>
-        <div class="divide circular operators operators-color">/</div>
+        <div style="font-size: 2.3rem;" class="divide circular operators operators-color">÷</div>
         <div class="seven digits circular numbers">7</div>
         <div class="eight digits circular numbers">8</div>
         <div class="nine digits circular numbers">9</div>
-        <div class="multiply circular operators operators-color">x</div>
+        <div style="font-size: 2rem;" class="multiply circular operators operators-color">×</div>
         <div class="four digits circular numbers">4</div>
         <div class="five digits circular numbers">5</div>
         <div class="six digits circular numbers">6</div>
-        <div class="subtract circular operators operators-color">-</div>
+        <div class="subtract circular operators operators-color">−</div>
         <div class="one digits circular numbers">1</div>
         <div class="two digits circular numbers">2</div>
         <div class="three digits circular numbers">3</div>
         <div class="add circular operators operators-color">+</div>
-        <div style="text-align: left" class="zero digits button-like numbers">0</div>
+        <div style="display: flex; justify-content: flex-start; padding-left: 19px; text-align: left; font-size: 1.5rem;" class="zero digits button-like numbers">0</div>
         <div class="dot circular numbers digits">.</div>
         <div class="equal circular operators operators-color">=</div>
       </div>
