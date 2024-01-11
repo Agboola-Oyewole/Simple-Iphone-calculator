@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: grey;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .calc-container {
+        border-radius: 10px;
+        background-color: black;
+        height: 500px;
+        width: 350px;
+      }
+      .calc-grid {
+        display: grid;
+        grid-template-columns: 60px 60px 60px 60px;
+        grid-template-rows: 60px 60px 60px 60px 60px;
+        padding-left: 30px;
+        padding-top: 10px;
+        row-gap: 10px;
+        column-gap: 15px;
+      }
+      .button-like {
+        text-align: left;
+        grid-column: span 2;
+        border-radius: 25px;
+        font-size: 2rem;
+      }
+      .circular {
+        align-items: start;
+        justify-content: start;
+        border-radius: 50%;
+        font-size: 1.5rem;
+      }
+      .calc-grid div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .numbers {
+        background-color: rgb(56, 54, 54);
+        color: white;
+      }
+      .top {
+        background-color: grey;
+        color: black;
+      }
+      .operators-color {
+        background-color: orange;
+        color: white;
+      }
+      .pressed {
+        box-shadow: 0px 0px 4px 0px #dbedf3;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calc-container">
+      <div
+        id="input-area"
+        style="
+          border-radius: 10px;
+          padding: 20px 40px 0 20px;
+          height: 100px;
+          font-size: 3.5rem;
+          text-align: right;
+          background-color: black;
+          color: white;
+        ">
+        0
+      </div>
+      <div class="calc-grid">
+        <div class="clear circular top">C</div>
+        <div class="minus circular top">+/-</div>
+        <div class="percent circular operators top">%</div>
+        <div class="divide circular operators operators-color">/</div>
+        <div class="seven digits circular numbers">7</div>
+        <div class="eight digits circular numbers">8</div>
+        <div class="nine digits circular numbers">9</div>
+        <div class="multiply circular operators operators-color">x</div>
+        <div class="four digits circular numbers">4</div>
+        <div class="five digits circular numbers">5</div>
+        <div class="six digits circular numbers">6</div>
+        <div class="subtract circular operators operators-color">-</div>
+        <div class="one digits circular numbers">1</div>
+        <div class="two digits circular numbers">2</div>
+        <div class="three digits circular numbers">3</div>
+        <div class="add circular operators operators-color">+</div>
+        <div style="text-align: left" class="zero digits button-like numbers">0</div>
+        <div class="dot circular numbers digits">.</div>
+        <div class="equal circular operators operators-color">=</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
