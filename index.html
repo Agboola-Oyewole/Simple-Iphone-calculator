@@ -8,11 +8,13 @@
       body {
         font-family: Arial, Helvetica, sans-serif;
         background-color: grey;
+        margin: 80px 0 0 0;
+      }
+      .calc-outer-background {
         display: flex;
-        height: 100vh;
+        
         align-items: center;
         justify-content: center;
-        margin: 0;
       }
       .calc-container {
         border-radius: 10px;
@@ -65,41 +67,66 @@
     </style>
   </head>
   <body>
-    <div class="calc-container">
-      <div
-        id="input-area"
-        style="
-          border-radius: 10px;
-          padding: 40px 40px 0 20px;
-          height: 80px;
-          font-size: 3.5rem;
-          text-align: right;
-          background-color: black;
-          color: white;
-        ">
-        0
+    <div class="calc-outer-background">
+      <div class="calc-container">
+        <div
+          id="input-area"
+          style="
+            border-radius: 10px;
+            padding: 40px 40px 0 20px;
+            height: 80px;
+            font-size: 3.5rem;
+            text-align: right;
+            background-color: black;
+            color: white;
+          ">
+          0
+        </div>
+        <div class="calc-grid">
+          <div class="clear circular top">AC</div>
+          <div class="minus circular top">+/-</div>
+          <div class="percent circular operators top">%</div>
+          <div
+            style="font-size: 2.3rem"
+            class="divide circular operators operators-color">
+            ÷
+          </div>
+          <div class="seven digits circular numbers">7</div>
+          <div class="eight digits circular numbers">8</div>
+          <div class="nine digits circular numbers">9</div>
+          <div
+            style="font-size: 2rem"
+            class="multiply circular operators operators-color">
+            ×
+          </div>
+          <div class="four digits circular numbers">4</div>
+          <div class="five digits circular numbers">5</div>
+          <div class="six digits circular numbers">6</div>
+          <div class="subtract circular operators operators-color">−</div>
+          <div class="one digits circular numbers">1</div>
+          <div class="two digits circular numbers">2</div>
+          <div class="three digits circular numbers">3</div>
+          <div class="add circular operators operators-color">+</div>
+          <div
+            style="
+              display: flex;
+              justify-content: flex-start;
+              padding-left: 19px;
+              text-align: left;
+              font-size: 1.5rem;
+            "
+            class="zero digits button-like numbers">
+            0
+          </div>
+          <div class="dot circular numbers digits">.</div>
+          <div class="equal circular operators operators-color">=</div>
+        </div>
       </div>
-      <div class="calc-grid">
-        <div class="clear circular top">AC</div>
-        <div class="minus circular top">+/-</div>
-        <div class="percent circular operators top">%</div>
-        <div style="font-size: 2.3rem;" class="divide circular operators operators-color">÷</div>
-        <div class="seven digits circular numbers">7</div>
-        <div class="eight digits circular numbers">8</div>
-        <div class="nine digits circular numbers">9</div>
-        <div style="font-size: 2rem;" class="multiply circular operators operators-color">×</div>
-        <div class="four digits circular numbers">4</div>
-        <div class="five digits circular numbers">5</div>
-        <div class="six digits circular numbers">6</div>
-        <div class="subtract circular operators operators-color">−</div>
-        <div class="one digits circular numbers">1</div>
-        <div class="two digits circular numbers">2</div>
-        <div class="three digits circular numbers">3</div>
-        <div class="add circular operators operators-color">+</div>
-        <div style="display: flex; justify-content: flex-start; padding-left: 19px; text-align: left; font-size: 1.5rem;" class="zero digits button-like numbers">0</div>
-        <div class="dot circular numbers digits">.</div>
-        <div class="equal circular operators operators-color">=</div>
-      </div>
+    </div>
+    <div style="display: block">
+      <h3 style="text-align: center; color: white; display: block">
+        <em>Designed by Oyewole Agboola. A</em>
+      </h3>
     </div>
     <script src="index.js"></script>
   </body>
